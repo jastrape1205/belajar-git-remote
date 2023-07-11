@@ -1,2 +1,4 @@
 menambahkan file1
 menambah baris baru file1
+merubah isi file1
+merubah lagi isi file1
