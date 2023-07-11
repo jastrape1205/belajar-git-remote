@@ -1,0 +1,52 @@
+//GIT DASAR//
+git muncul tahun 2005 dibuat oleh linus torvalds
+
+version control dibagi menjadi 3
+-local version control, contoh komputer local
+-centerlized version control, contoh subversion
+-distributed version control, contoh git
+
+code git:
+git --version //mengecek git dan versinya
+#primary key git# configurasi usahakan sesuai dengan github
+#git config --global user.name "username github"
+#git config --global email.name "email github"
+git config --global core.editor "code --wait"
+git config --global diff.tool "default-difftool"
+git config --global difftool.default-difftool.cmd "code --wait --diff \$LOCAL \$REMOTE"
+git config --list --show-origin //mengeecek secara detail configurasi yang digunakan
+git init   //membuat git repository
+//the three state git : modified(working directory), staged(staging area/index) dan commit(repository)
+//commit = snapshoot, setiap snapshoot menghasilkan hash, hash yang digunakan git menggunakan algoritma SHA-1
+//head = hash terkhir yang dicommit
+git add "namafile" //untuk menambahkan ke staging index
+git commit -m "pesan/keterangan" //untuk menambahkan ke repository
+git status //untuk mengecek file adakah perubahan
+git diff //untuk melihat perubahan file
+//tidak usah kuatir file hilang atau terhapus selama file berada di repository file akan aman
+git clean -f //selama berada di working area file tersebut bisa hapus
+git restore "namafile" // selama berada di working area file tersebut bisa dikembalikan atau dibatalkan
+git restore --staged "namafile" //jika sudah terlanjur berada di staging index bisa dikembalikan atau dibatalkan
+git log //untuk melihat detail riwayat file snapshoot dan hashnya
+git log --oneline //log disederhanakan
+git log --oneline --graph // melihat cabang yang di git log --oneline
+git show "hash" // melihat secara detail perubahan di hash tersebut
+git diff "hash1" "hash2" // membandingkan hasil commit yang terjadi di antara "hash1" dan "hash2"
+git difftool "hash1" "hash2" // bisa juga menggunakan Visual studio code untuk melihat perbedaan antara commit
+//rename file merupakan 2 operasi yang digabungkan penghapusan file + penambahan file baru
+//git reset ada banyak tapi 3 mode yang paling banyak digunakan ; --soft, --mixed, --hard
+//git reset bisa dilakukan maju atau mundur selama belum dilakukan commit baru karna jika sudah dilakukan commit baru, commit baru akan menimpa commit yang paling baru/head
+git reset --soft "hash" // perubahannya masih ada di staging index
+git reset --mixed "hash" // perubahannya masih ada di working directory
+git reset --hard "hash" // perubahannya akan hilang semunaya
+git commit --amend -m "pesan/keterangan" // digunakan pada saat ingin merubah atau menambahkan isi file tetapi file sudah dicommit dan ingin membuat di commit yang sama tetapi hash yang dihasilkan nantinya akan berbeda (cari file yang sudah di commit dan ingin diubah/ditambahkan isi filenya di modified filenya lalu di add lalu gunakan perintah git --amend )
+git checkout "hash" "--namafile" //digunakan untuk melihat isi commit sebelumnya jika adakah perubahan file bisa digunakan atau direstore
+git branch --show-current // untuk melihat nama branch saat ini
+git checkout "hash" //untuk masuk ke timeline commit yang diketikan hashnya bisa digunakan atau juga tidak
+git revert "hash" // untuk mengembalikan perubahan pada commit/hash yang ditujunya saja dan otomatis membuat commit yang baru
+membuat file ekstension git berupa .gitignore //fungsi file digunakan untuk mengecualikan file - file agar tidak ditrack dalam git
+git blame "namafile" //digunakan untuk mengetahui secara detail siapa yang mengubah, menambahkan file (lalu dicari hashnya dengan git show "hash")
+git config --global alias."nama perintah yang ingin diganti" "perintah git defaultny apa"
+//contoh git config --global alias.ko commit//
+--unset jika tidak jadi ingin menggunakan fungsi di dalam git config
+//contoh git config --unset --global alias.ko
