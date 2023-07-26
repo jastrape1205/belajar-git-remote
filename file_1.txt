@@ -3,3 +3,4 @@ menambah baris baru file1
 menambah future 1
 menambah future A
 menambah future B
+menambah future C
