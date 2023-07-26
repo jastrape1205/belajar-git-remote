@@ -1,2 +1,3 @@
 menambahkan file1
 menambah baris baru file1
+menambah future 1
