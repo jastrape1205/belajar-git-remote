@@ -1,1 +1,2 @@
 versi A
+manambah future squash
