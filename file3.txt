@@ -2,3 +2,4 @@ mengubah file3.txt
 menambahkan future 3
 menambahkan future B
 menambahkan future DDD
+menambahkan future rebase
