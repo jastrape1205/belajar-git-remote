@@ -5,3 +5,4 @@ menambah future A
 menambah future B
 menambah future C
 MASTER
+Sang Master
