@@ -6,3 +6,4 @@ menambah future B
 menambah future C
 MASTER
 Sang Master
+menambah future squash
