@@ -4,3 +4,4 @@ menambah future 1
 menambah future A
 menambah future B
 menambah future C
+MASTER
