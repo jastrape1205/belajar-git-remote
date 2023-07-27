@@ -3,3 +3,4 @@ menambah baris baru file2
 menambahkan future 2
 menambahkan future A
 menambahkan future DD
+menambahkan future rebase
