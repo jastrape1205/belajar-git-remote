@@ -1,3 +1,4 @@
 [submodule "script"]
 	path = script
 	url = git@github.com:jastrape1205/git-submodule.git
+	branch = release
