@@ -1,3 +1,2 @@
 versi A
-manambah future 
-menambah future contoh
+manambah future squash
